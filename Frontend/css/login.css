@@ -1,0 +1,336 @@
+/* ================= GOOGLE FONT ================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* ================= RESET ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+
+/* ================= BODY ================= */
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+
+    background:#0f172a;
+    color:white;
+}
+
+
+/* ================= CONTAINER ================= */
+
+.container{
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:30px;
+}
+
+
+/* ================= LOGIN BOX ================= */
+
+.login-box{
+    width:420px;
+
+    background:#111827;
+
+    border:1px solid #1f2937;
+    border-radius:20px;
+
+    padding:40px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+
+    transition:.3s;
+}
+
+.login-box:hover{
+    box-shadow:0 15px 45px rgba(56,189,248,.15);
+}
+
+
+/* ================= HEADINGS ================= */
+
+.login-box h1{
+    text-align:center;
+
+    color:#38bdf8;
+
+    font-size:34px;
+
+    margin-bottom:10px;
+}
+
+.login-box h2{
+    text-align:center;
+
+    font-size:28px;
+
+    margin-bottom:10px;
+}
+
+.login-box p{
+    text-align:center;
+
+    color:#94a3b8;
+
+    margin-bottom:25px;
+}
+
+
+/* ================= LABEL ================= */
+
+label{
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:500;
+}
+
+
+/* ================= INPUT ================= */
+
+input[type="email"],
+input[type="password"]{
+    width:100%;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    border:1px solid #334155;
+
+    background:#1e293b;
+
+    color:white;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+}
+
+input::placeholder{
+    color:#64748b;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus{
+    border-color:#38bdf8;
+
+    box-shadow:0 0 10px rgba(56,189,248,.4);
+}
+
+
+/* ================= PASSWORD BOX ================= */
+
+.password-box{
+    position:relative;
+}
+
+.password-box input{
+    padding-right:50px;
+}
+
+
+/* ================= EYE ICON ================= */
+
+.toggle-password{
+    position:absolute;
+
+    right:15px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    color:#94a3b8;
+
+    user-select:none;
+
+    transition:.3s;
+}
+
+.toggle-password:hover{
+    color:#38bdf8;
+}
+
+
+/* ================= ERROR MESSAGE ================= */
+
+.error{
+    display:block;
+
+    min-height:18px;
+
+    margin-top:5px;
+    margin-bottom:15px;
+
+    color:#ef4444;
+
+    font-size:13px;
+
+    text-align:left;
+}
+
+
+/* ================= INPUT VALIDATION ================= */
+
+.input-error{
+    border:1px solid #ef4444 !important;
+}
+
+.input-success{
+    border:1px solid #22c55e !important;
+}
+
+
+/* ================= OPTIONS ================= */
+
+.options{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+    font-size:14px;
+}
+
+.options label{
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin:0;
+
+    color:#cbd5e1;
+}
+
+.options input{
+    width:auto;
+
+    margin:0;
+
+    cursor:pointer;
+}
+
+.options a{
+    text-decoration:none;
+
+    color:#38bdf8;
+
+    transition:.3s;
+}
+
+.options a:hover{
+    text-decoration:underline;
+}
+
+
+/* ================= BUTTON ================= */
+
+button{
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:linear-gradient(
+        90deg,
+        #38bdf8,
+        #8b5cf6
+    );
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(56,189,248,.4);
+}
+
+
+/* ================= REGISTER ================= */
+
+.register{
+    margin-top:25px;
+
+    text-align:center;
+}
+
+.register a{
+    color:#38bdf8;
+
+    text-decoration:none;
+
+    font-weight:600;
+}
+
+.register a:hover{
+    text-decoration:underline;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:500px){
+
+    .container{
+        padding:20px;
+    }
+
+    .login-box{
+        width:100%;
+
+        padding:30px;
+    }
+
+    .login-box h1{
+        font-size:30px;
+    }
+
+    .login-box h2{
+        font-size:24px;
+    }
+
+    .options{
+        gap:15px;
+    }
+
+}

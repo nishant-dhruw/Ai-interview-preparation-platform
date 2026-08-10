@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | AI Interview</title>
+
+    <link rel="stylesheet" href="../css/register.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="register-box">
+
+            <h1>AI Interview</h1>
+
+            <h2>Create Account</h2>
+
+            <p>Join the platform and start preparing today.</p>
+
+            <form id="registerForm">
+
+                <!-- ================= FULL NAME ================= -->
+
+                <label for="name">Full Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your full name"
+                    required>
+
+                <small id="nameError" class="error"></small>
+
+
+                <!-- ================= EMAIL ================= -->
+
+                <label for="email">Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required>
+
+                <small id="emailError" class="error"></small>
+
+
+                <!-- ================= PASSWORD ================= -->
+
+                <label for="password">Password</label>
+
+                <div class="password-box">
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Create password"
+                        required>
+
+                    <span
+                        class="toggle-password"
+                        id="togglePassword">
+                        👁
+                    </span>
+
+                </div>
+
+                <small id="passwordError" class="error"></small>
+
+                <!-- Password Strength -->
+
+                <div class="password-strength">
+
+                    <div class="strength-header">
+
+                        <span>Password Strength</span>
+
+                        <span id="strengthText">Weak</span>
+
+                    </div>
+
+                    <div class="strength-bar">
+
+                        <div id="strengthFill"></div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= CONFIRM PASSWORD ================= -->
+
+                <label for="confirmPassword">
+
+                    Confirm Password
+
+                </label>
+
+                <div class="password-box">
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm password"
+                        required>
+
+                    <span
+                        class="toggle-password"
+                        id="toggleConfirmPassword">
+                        👁
+                    </span>
+
+                </div>
+
+                <small
+                    id="confirmPasswordError"
+                    class="error">
+                </small>
+
+
+                <!-- ================= TERMS ================= -->
+
+                <label class="terms">
+
+                    <input
+                        type="checkbox"
+                        id="terms">
+
+                    I agree to the Terms & Conditions
+
+                </label>
+
+                <small
+                    id="termsError"
+                    class="error">
+                </small>
+
+
+                <!-- ================= BUTTON ================= -->
+
+                <button type="submit">
+
+                    Create Account
+
+                </button>
+
+            </form>
+
+            <p class="login-link">
+
+                Already have an account?
+
+                <a href="login.html">
+
+                    Login
+
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="../js/register.js"></script>
+
+</body>
+
+</html>
