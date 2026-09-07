@@ -4,7 +4,6 @@
 
 # Maven
 target/
-.mvn/
 
 # Java
 *.class
@@ -21,5 +20,9 @@ Thumbs.db
 *.env
 
 # Local Spring configuration
+application.properties
 application-local.properties
 application-local.yml
+
+# Windows folder metadata
+desktop.ini

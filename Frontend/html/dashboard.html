@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | AI Interview</title>
+    <link rel="icon"
+        type="image/png"
+        href="../assets/favicon.png">
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            AI Interview
+        </div>
+
+        <div class="nav-right">
+
+            <span id="welcomeUser">
+                Welcome
+            </span>
+
+            <button id="logoutButton">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= DASHBOARD ================= -->
+
+    <main class="dashboard">
+
+        <div class="dashboard-header">
+
+            <div>
+
+                <h1>
+                    Welcome back, <span id="userName">User</span> 👋
+                </h1>
+
+                <p>
+                    Track your interview preparation and improve your performance.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= STATISTICS ================= -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🎤
+                </div>
+
+                <h3>
+                    Total Interviews
+                </h3>
+
+                <p id="totalInterviews">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ⭐
+                </div>
+
+                <h3>
+                    Average Score
+                </h3>
+
+                <p id="averageScore">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ✅
+                </div>
+
+                <h3>
+                    Completed
+                </h3>
+
+                <p id="completedInterviews">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📈
+                </div>
+
+                <h3>
+                    Progress
+                </h3>
+
+                <p id="progress">
+                    0%
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= QUICK ACTIONS ================= -->
+
+        <section class="quick-actions">
+
+            <h2>
+                Quick Actions
+            </h2>
+
+
+            <div class="action-container">
+
+                <div class="action-card">
+
+                    <div class="action-icon">
+                        🤖
+                    </div>
+
+                    <h3>
+                        AI Mock Interview
+                    </h3>
+
+                    <p>
+                        Practice Java, DSA, HR and technical interviews.
+                    </p>
+
+                    <button
+                        id="startInterviewButton"
+                        class="primary-button">
+
+                        Start Interview
+
+                    </button>
+
+                </div>
+
+
+                <div class="action-card">
+
+                    <div class="action-icon">
+                        📄
+                    </div>
+
+                    <h3>
+                        Resume Analyzer
+                    </h3>
+
+                    <p>
+                        Upload your resume and get AI-powered feedback.
+                    </p>
+
+                    <button
+                        id="resumeButton"
+                        class="secondary-button">
+
+                        Analyze Resume
+
+                    </button>
+
+                </div>
+
+
+                <div class="action-card">
+
+                    <div class="action-icon">
+                        📊
+                    </div>
+
+                    <h3>
+                        Interview History
+                    </h3>
+
+                    <p>
+                        View your previous interviews and scores.
+                    </p>
+
+                    <button
+                        id="historyButton"
+                        class="secondary-button">
+
+                        View History
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RECENT INTERVIEWS ================= -->
+
+        <section class="recent-interviews">
+
+            <h2>
+                Recent Interviews
+            </h2>
+
+            <div id="interviewList">
+
+                <p class="empty-message">
+                    No interviews yet. Start your first interview! 🚀
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

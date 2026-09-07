@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>AI Mock Interview</title>
+    <link rel="icon"
+        type="image/png"
+        href="../assets/favicon.png">
+
+    <link rel="stylesheet"
+        href="../css/interview.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            AI Interview
+        </div>
+
+        <div class="nav-right">
+
+            <span id="interviewType">
+                Interview
+            </span>
+
+            <button id="exitButton">
+                Exit
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= INTERVIEW ================= -->
+
+    <main class="interview-container">
+
+    <!-- ================= INTERVIEW HEADER ================= -->
+
+    <div class="interview-header">
+
+        <h1>
+            AI Mock Interview 🤖
+        </h1>
+
+        <p id="progressText">
+            Choose your interview type
+        </p>
+
+    </div>
+
+
+    <!-- ================= INTERVIEW TYPE SELECTION ================= -->
+
+    <section id="typeSelection" class="type-selection">
+
+        <h2>
+            Choose Interview Type
+        </h2>
+
+        <p>
+            Select the type of interview you want to practice.
+        </p>
+
+        <div class="type-options">
+
+            <button
+                class="type-button"
+                data-type="JAVA">
+
+                ☕
+                <span>Java</span>
+
+            </button>
+
+
+            <button
+                class="type-button"
+                data-type="DSA">
+
+                🧠
+                <span>DSA</span>
+
+            </button>
+
+
+            <button
+                class="type-button"
+                data-type="HR">
+
+                💼
+                <span>HR</span>
+
+            </button>
+
+
+            <button
+                class="type-button"
+                data-type="TECHNICAL">
+
+                💻
+                <span>Technical</span>
+
+            </button>
+
+        </div>
+
+        <button
+            id="startInterviewButton"
+            class="primary-button"
+            disabled>
+
+            Start Interview 🚀
+
+        </button>
+
+    </section>
+
+
+    <!-- ================= QUESTION CARD ================= -->
+
+    <section
+        id="questionSection"
+        class="question-card"
+        style="display:none;">
+
+        <div
+            class="question-number"
+            id="questionNumber">
+
+            Question 1
+
+        </div>
+
+
+        <h2 id="questionText">
+            Loading question...
+        </h2>
+
+
+        <textarea
+            id="answerInput"
+            placeholder="Type your answer here..."
+            autocomplete="off"
+            spellcheck="false"></textarea>
+
+
+        <div class="button-container">
+
+            <button
+                id="nextButton"
+                class="primary-button">
+
+                Next Question →
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= LOADING ================= -->
+
+    <div
+        id="loadingMessage"
+        class="loading"
+        style="display:none;">
+
+        🤖 AI is preparing your interview...
+
+    </div>
+
+
+    <!-- ================= ERROR ================= -->
+
+    <div
+        id="errorMessage"
+        class="error"
+        style="display:none;">
+
+    </div>
+
+</main>
+
+
+    <script src="../js/interview.js"></script>
+
+</body>
+
+</html>

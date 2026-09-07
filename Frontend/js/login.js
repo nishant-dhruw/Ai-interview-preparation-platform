@@ -25,13 +25,11 @@ togglePassword.addEventListener("click", function () {
     if (password.type === "password") {
 
         password.type = "text";
-
         togglePassword.textContent = "🙈";
 
     } else {
 
         password.type = "password";
-
         togglePassword.textContent = "👁";
 
     }
@@ -41,20 +39,15 @@ togglePassword.addEventListener("click", function () {
 
 // ======================= LOGIN FORM SUBMIT =======================
 
-loginForm.addEventListener("submit", function (event) {
+loginForm.addEventListener("submit", async function (event) {
 
     // Stop page refresh
-
     event.preventDefault();
 
-
     // Remove old errors
-
     clearErrors();
 
-
     // Form validation status
-
     let isValid = true;
 
 
@@ -108,17 +101,106 @@ loginForm.addEventListener("submit", function (event) {
     }
 
 
-    // ======================= LOGIN SUCCESS =======================
+    // ======================= STOP IF INVALID =======================
 
-    if (isValid) {
+    if (!isValid) {
+        return;
+    }
 
-        alert("Login validation successful!");
 
-        console.log("Email:", email.value);
+    // ======================= LOGIN API =======================
 
-        console.log(
-            "Remember Me:",
-            rememberMe.checked
+    try {
+
+        const response = await fetch(
+            "http://localhost:8080/api/auth/login",
+            {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify({
+                    email: email.value.trim(),
+                    password: password.value
+                })
+            }
+        );
+
+
+        // ======================= LOGIN FAILED =======================
+
+        if (!response.ok) {
+
+            if (response.status === 401) {
+
+                showError(
+                    password,
+                    passwordError,
+                    "Invalid email or password."
+                );
+
+            } else {
+
+                alert("Login failed. Please try again.");
+
+            }
+
+            return;
+        }
+
+
+        // ======================= LOGIN SUCCESS =======================
+
+        const data = await response.json();
+
+        console.log("Login successful!");
+        console.log("User:", data);
+        console.log("Token:", data.token);
+
+
+        // ======================= SAVE JWT =======================
+
+        if (rememberMe.checked) {
+
+            localStorage.setItem("token", data.token);
+
+        } else {
+
+            sessionStorage.setItem("token", data.token);
+
+        }
+
+
+        // ======================= SAVE USER INFO =======================
+
+        localStorage.setItem(
+            "userId",
+            data.id
+        );
+
+        localStorage.setItem(
+            "userName",
+            data.name
+        );
+
+        localStorage.setItem(
+            "userEmail",
+            data.email
+        );
+
+
+        // ======================= GO TO DASHBOARD =======================
+
+        window.location.href = "index.html";
+
+    } catch (error) {
+
+        console.error("Login error:", error);
+
+        alert(
+            "Cannot connect to the server. Make sure the Spring Boot backend is running."
         );
 
     }

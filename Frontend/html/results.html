@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Interview Results | AI Interview</title>
+    <link rel="icon"
+        type="image/png"
+        href="../assets/favicon.png">
+
+    <link rel="stylesheet"
+        href="../css/results.css">
+
+</head>
+
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            AI Interview
+        </div>
+
+        <button
+            id="dashboardButton"
+            class="dashboard-button">
+
+            Dashboard
+
+        </button>
+
+    </nav>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="results-container">
+
+
+        <!-- ================= HEADER ================= -->
+
+        <section class="results-header">
+
+            <div class="success-icon">
+                🎉
+            </div>
+
+            <h1>
+                Interview Completed!
+            </h1>
+
+            <p>
+                Great job! Here is your AI-powered interview
+                performance report.
+            </p>
+
+        </section>
+
+
+        <!-- ================= SCORE CARD ================= -->
+
+        <section class="score-card">
+
+            <div class="score-title">
+                Overall Score
+            </div>
+
+            <div
+                id="overallScore"
+                class="overall-score">
+
+                --/10
+
+            </div>
+
+            <div
+                id="scoreMessage"
+                class="score-message">
+
+                Calculating your performance...
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PERFORMANCE ================= -->
+
+        <section class="performance-section">
+
+            <h2>
+                Your Performance
+            </h2>
+
+            <div
+                id="performanceSummary"
+                class="performance-summary">
+
+                Loading performance...
+
+            </div>
+
+        </section>
+
+        <!-- =====================================================
+                AI RECOMMENDATION
+        ===================================================== -->
+
+        <div class="ai-recommendation">
+
+            <div class="recommendation-title">
+                🤖 AI Recommendation
+            </div>
+
+            <div
+                id="aiRecommendation"
+                class="recommendation-text">
+            </div>
+
+        </div>
+
+
+        <!-- ================= QUESTIONS ================= -->
+
+        <section class="questions-section">
+
+            <h2>
+                Question-wise Feedback
+            </h2>
+
+            <div
+                id="questionsContainer"
+                class="questions-container">
+
+                <!-- Questions will be added by JavaScript -->
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BUTTON ================= -->
+
+        <div class="bottom-actions">
+
+            <button
+                id="dashboardButtonBottom"
+                class="primary-button">
+
+                Back to Dashboard →
+
+            </button>
+
+        </div>
+
+
+        <!-- ================= LOADING ================= -->
+
+        <div
+            id="loadingMessage"
+            class="loading">
+
+            🤖 Generating your results...
+
+        </div>
+
+
+        <!-- ================= ERROR ================= -->
+
+        <div
+            id="errorMessage"
+            class="error"
+            style="display: none;">
+
+        </div>
+
+
+    </main>
+
+
+    <script src="../js/results.js"></script>
+
+</body>
+
+</html>
